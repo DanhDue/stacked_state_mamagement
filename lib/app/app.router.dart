@@ -10,21 +10,30 @@ import 'package:flutter/material.dart';
 import 'package:stacked/stacked.dart';
 import 'package:stacked/stacked_annotations.dart';
 
+import '../ui/views/activity/activity_view.dart';
 import '../ui/views/home/home_view.dart';
 import '../ui/views/login/login_view.dart';
 import '../ui/views/onboard/onboard_view.dart';
+import '../ui/views/profile/profile_view.dart';
 import '../ui/views/splash/splash_view.dart';
+import '../ui/views/workout/workout_view.dart';
 
 class Routes {
   static const String splashView = '/';
   static const String loginView = '/login-view';
   static const String onboardView = '/onboard-view';
   static const String homeView = '/home-view';
+  static const String workoutView = '/workout-view';
+  static const String activityView = '/activity-view';
+  static const String profileView = '/profile-view';
   static const all = <String>{
     splashView,
     loginView,
     onboardView,
     homeView,
+    workoutView,
+    activityView,
+    profileView,
   };
 }
 
@@ -36,6 +45,9 @@ class StackedRouter extends RouterBase {
     RouteDef(Routes.loginView, page: LoginView),
     RouteDef(Routes.onboardView, page: OnboardView),
     RouteDef(Routes.homeView, page: HomeView),
+    RouteDef(Routes.workoutView, page: WorkoutView),
+    RouteDef(Routes.activityView, page: ActivityView),
+    RouteDef(Routes.profileView, page: ProfileView),
   ];
   @override
   Map<Type, StackedRouteFactory> get pagesMap => _pagesMap;
@@ -61,6 +73,24 @@ class StackedRouter extends RouterBase {
     HomeView: (data) {
       return MaterialPageRoute<dynamic>(
         builder: (context) => const HomeView(),
+        settings: data,
+      );
+    },
+    WorkoutView: (data) {
+      return MaterialPageRoute<dynamic>(
+        builder: (context) => const WorkoutView(),
+        settings: data,
+      );
+    },
+    ActivityView: (data) {
+      return MaterialPageRoute<dynamic>(
+        builder: (context) => const ActivityView(),
+        settings: data,
+      );
+    },
+    ProfileView: (data) {
+      return MaterialPageRoute<dynamic>(
+        builder: (context) => const ProfileView(),
         settings: data,
       );
     },
