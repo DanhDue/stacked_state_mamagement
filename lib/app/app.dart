@@ -4,12 +4,16 @@ import 'package:stacked_state_mamagement/data/remote/api_service.dart';
 import 'package:stacked_state_mamagement/data/repository/impl/post_repository_impl.dart';
 import 'package:stacked_state_mamagement/data/repository/post_repository.dart';
 import 'package:stacked_state_mamagement/ui/views/activity/activity_view.dart';
+import 'package:stacked_state_mamagement/ui/views/activity/activity_view_model.dart';
 import 'package:stacked_state_mamagement/ui/views/home/home_view.dart';
 import 'package:stacked_state_mamagement/ui/views/login/login_view.dart';
 import 'package:stacked_state_mamagement/ui/views/onboard/onboard_view.dart';
 import 'package:stacked_state_mamagement/ui/views/profile/profile_view.dart';
+import 'package:stacked_state_mamagement/ui/views/profile/profile_view_model.dart';
+import 'package:stacked_state_mamagement/ui/views/program/program_view_model.dart';
 import 'package:stacked_state_mamagement/ui/views/splash/splash_view.dart';
 import 'package:stacked_state_mamagement/ui/views/workout/workout_view.dart';
+import 'package:stacked_state_mamagement/ui/views/workout/workout_view_model.dart';
 
 @StackedApp(
   routes: [
@@ -25,6 +29,10 @@ import 'package:stacked_state_mamagement/ui/views/workout/workout_view.dart';
     LazySingleton(classType: NavigationService),
     LazySingleton(classType: ApiService),
     LazySingleton(classType: PostRepositoryImpl, asType: PostRepository),
+    Singleton(classType: ProgramViewModel),
+    Singleton(classType: WorkoutViewModel),
+    Singleton(classType: ActivityViewModel),
+    Singleton(classType: ProfileViewModel),
   ]
 )
 class AppConfigurations { }

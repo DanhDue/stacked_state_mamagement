@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:stacked/stacked.dart';
+import 'package:stacked_state_mamagement/app/app.locator.dart';
 
 import 'activity_view_model.dart';
 
@@ -9,8 +10,13 @@ class ActivityView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ViewModelBuilder<ActivityViewModel>.reactive(
-      builder: (context, model, child) => const Scaffold(),
-      viewModelBuilder: () => ActivityViewModel(),
+      disposeViewModel: false,
+      // Indicate that we only want to initialise a specialty view model once
+      initialiseSpecialViewModelsOnce: true,
+      builder: (context, model, child) => const Scaffold(
+        body: Center(child: Text('Activity'),),
+      ),
+      viewModelBuilder: () => locator<ActivityViewModel>(),
     );
   }
 }

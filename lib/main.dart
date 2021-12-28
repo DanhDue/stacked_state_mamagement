@@ -1,15 +1,32 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter_fimber/flutter_fimber.dart';
 import 'package:stacked_services/stacked_services.dart';
 
 import 'app/app.locator.dart';
 import 'app/app.router.dart';
 
-void main() {
+void main() async {
+  SystemChrome.setSystemUIOverlayStyle(const SystemUiOverlayStyle(
+    statusBarColor: Colors.transparent,
+  ));
+  WidgetsFlutterBinding.ensureInitialized();
   Fimber.plantTree(FimberTree(useColors: true));
   Fimber.plantTree(DebugBufferTree.elapsed());
   setupLocator();
-  runApp(const MyApp());
+
+  // support multiple languages
+  await EasyLocalization.ensureInitialized();
+  EasyLocalization.logger.enableBuildModes = [];
+
+  runApp(
+    EasyLocalization(
+        child: const MyApp(),
+        supportedLocales: const [Locale('vi')],
+        fallbackLocale: const Locale('vi'),
+        useFallbackTranslations: true,
+        path: 'assets/translations'),);
 }
 
 class MyApp extends StatelessWidget {

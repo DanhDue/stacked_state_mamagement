@@ -9,7 +9,11 @@ class LoginView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ViewModelBuilder<LoginViewModel>.reactive(
-      builder: (context, model, child) => const Scaffold(),
+      builder: (context, model, child) => const Scaffold(
+        body: Center(
+          child: Text('Login'),
+        ),
+      ),
       viewModelBuilder: () => LoginViewModel(),
     );
   }

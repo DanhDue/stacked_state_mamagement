@@ -1,15 +1,22 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="com.danhdue.stacked_state_mamagement">
    <application
         android:label="stacked_state_mamagement"
-        android:icon="@mipmap/ic_launcher">
+        android:icon="@mipmap/ic_launcher"
+        android:theme="@style/AppTheme">
         <activity
             android:name=".MainActivity"
             android:launchMode="singleTop"
-            android:theme="@style/LaunchTheme"
             android:configChanges="orientation|keyboardHidden|keyboard|screenSize|smallestScreenSize|locale|layoutDirection|fontScale|screenLayout|density|uiMode"
+            android:windowSoftInputMode="adjustResize"
+            android:allowBackup="true"
+            android:supportsRtl="true"
             android:hardwareAccelerated="true"
-            android:windowSoftInputMode="adjustResize">
+            android:largeHeap="true"
+            android:alwaysRetainTaskState="true"
+            android:exported="true"
+            tools:ignore="RtlEnabled">
             <!-- Specifies an Android theme to apply to this Activity as soon as
                  the Android process has started. This theme is visible to the user
                  while the Flutter UI initializes. After that, this theme continues

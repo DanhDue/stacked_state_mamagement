@@ -1,3 +1,4 @@
+import 'package:animations/animations.dart';
 import 'package:flutter/material.dart';
 import 'package:stacked/stacked.dart';
 import 'package:stacked_state_mamagement/ui/views/activity/activity_view.dart';
@@ -16,7 +17,7 @@ class HomeView extends StatelessWidget {
       builder: (context, model, child) => Scaffold(
         bottomNavigationBar: BottomNavigationBar(
           type: BottomNavigationBarType.fixed,
-          backgroundColor: Colors.grey[800],
+          backgroundColor: Colors.grey[86],
           currentIndex: model.currentIndex,
           onTap: model.setIndex,
           items: const [
@@ -38,7 +39,23 @@ class HomeView extends StatelessWidget {
             ),
           ],
         ),
-        body: getViewForIndex(model.currentIndex),
+        body: PageTransitionSwitcher(
+            duration: const Duration(milliseconds: 300),
+            reverse: model.reverse,
+            transitionBuilder: (
+                Widget child,
+                Animation<double> animation,
+                Animation<double> secondaryAnimation,
+                ) {
+              return SharedAxisTransition(
+                child: child,
+                animation: animation,
+                secondaryAnimation: secondaryAnimation,
+                transitionType: SharedAxisTransitionType.horizontal,
+              );
+            },
+            child: getViewForIndex(model.currentIndex)
+        ),
       ),
       viewModelBuilder: () => HomeViewModel(),
     );
