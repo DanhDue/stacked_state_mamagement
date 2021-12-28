@@ -20,6 +20,24 @@ Technical Information used in this project:
 
 Moreover, you can read more detail about some project components by clicking to links contained at [References][16] part.
 
+Implementation
+--------------
+Flutter version management is a big trouble that any Flutter developers have to face in their development process.
+So, in this project, I have used the FVM([Flutter Version Management][18]) package to manage it easily, rapidly, and conveniently.
+
+To install this app, you can see at FVM official [page][https://fvm.app/docs/getting_started/installation].
+Here, I only show you some steps to run this sample.
+
+1. Flutter version 2..8.0 is used for this project:
+```
+fvm use 2.8.0
+```
+
+2. FVM setup:
+<p align='center'>
+    <img src="screenshots/fvm_setup.gif" />
+</p>
+
 Libraries Used
 --------------
 
@@ -54,6 +72,9 @@ Libraries Used
 [15]: https://github.com/DanhDue/stacked_state_mamagement#screenshots
 [16]: https://github.com/DanhDue/stacked_state_mamagement#references
 
+[17]: https://viblo.asia/p/bottom-navigation-with-stacked-architecture-XL6lABVp5ek
+[18]: https://fvm.app/
+
 
 Screenshots
 -----------
@@ -71,8 +92,9 @@ Screenshots
 
 References
 ----------
-* [New Setup for Flutter Stacked State Management .][3]
-* [ Flutter StateManagement with Stacked - Deep Dive tutorial .][4]
+* [New Setup for Flutter Stacked State Management.][3]
+* [Flutter StateManagement with Stacked - Deep Dive tutorial.][4]
+* [Bottom Navigation with Stacked Architecture.][17]
 
 License
 -------
