@@ -25,7 +25,7 @@ Implementation
 Flutter version management is a big trouble that any Flutter developers have to face in their development process.
 So, in this project, I have used the FVM([Flutter Version Management][18]) package to manage it easily, rapidly, and conveniently.
 
-To install this app, you can see at FVM official [page][https://fvm.app/docs/getting_started/installation].
+To install this app, you can see at FVM official [page][19].
 Here, I only show you some steps to run this sample.
 
 1. Flutter version 2..8.0 is used for this project:
@@ -74,6 +74,7 @@ Libraries Used
 
 [17]: https://viblo.asia/p/bottom-navigation-with-stacked-architecture-XL6lABVp5ek
 [18]: https://fvm.app/
+[19]: https://fvm.app/docs/getting_started/installation
 
 
 Screenshots
