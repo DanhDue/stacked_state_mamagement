@@ -9,6 +9,6 @@ class SplashViewModel extends BaseViewModel {
 
   void indicateAnimationComplete() {
     _animationComplete = true;
-    _navigationService.navigateTo(Routes.homeView);
+    _navigationService.pushNamedAndRemoveUntil(Routes.homeView);
   }
 }

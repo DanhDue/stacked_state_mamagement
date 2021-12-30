@@ -13,7 +13,14 @@ class ProfileViewModel extends BaseViewModel {
   final _userRepository = locator<PostRepository>();
   List<PostRes>? users;
 
+  @override
+  void dispose() {
+    Fimber.d('dispose()');
+    super.dispose();
+  }
+
   void getUserProfile() async {
+    Fimber.d('getUserProfile()');
     if(users != null) return;
     users = await _userRepository.getPostsForUser(1);
     Fimber.d('users: $users');

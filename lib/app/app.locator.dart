@@ -13,6 +13,7 @@ import 'package:stacked_services/stacked_services.dart';
 import '../data/remote/api_service.dart';
 import '../data/repository/impl/post_repository_impl.dart';
 import '../data/repository/post_repository.dart';
+import '../services/counter_service.dart';
 import '../ui/views/activity/activity_view_model.dart';
 import '../ui/views/profile/profile_view_model.dart';
 import '../ui/views/program/program_view_model.dart';
@@ -33,4 +34,5 @@ void setupLocator({String? environment, EnvironmentFilter? environmentFilter}) {
   locator.registerSingleton(WorkoutViewModel());
   locator.registerSingleton(ActivityViewModel());
   locator.registerSingleton(ProfileViewModel());
+  locator.registerLazySingleton(() => CounterService());
 }

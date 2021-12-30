@@ -31,8 +31,4 @@ class SplashView extends HookWidget {
       viewModelBuilder: () => SplashViewModel(),
     );
   }
-
-  void abc() {
-
-  }
 }

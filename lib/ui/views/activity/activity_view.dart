@@ -13,8 +13,13 @@ class ActivityView extends StatelessWidget {
       disposeViewModel: false,
       // Indicate that we only want to initialise a specialty view model once
       initialiseSpecialViewModelsOnce: true,
-      builder: (context, model, child) => const Scaffold(
-        body: Center(child: Text('Activity'),),
+      builder: (context, model, child) => Scaffold(
+        body: Center(child: TextButton(
+          onPressed: () {
+            model.navigateToPartialBuildsView();
+          },
+          child: const Text('Continue'),
+        )),
       ),
       viewModelBuilder: () => locator<ActivityViewModel>(),
     );

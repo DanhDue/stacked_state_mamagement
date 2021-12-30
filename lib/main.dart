@@ -7,6 +7,9 @@ import 'package:stacked_services/stacked_services.dart';
 import 'app/app.locator.dart';
 import 'app/app.router.dart';
 
+// Register the RouteObserver as a navigation observer.
+final RouteObserver<ModalRoute<void>> routeObserver = RouteObserver<ModalRoute<void>>();
+
 void main() async {
   SystemChrome.setSystemUIOverlayStyle(const SystemUiOverlayStyle(
     statusBarColor: Colors.transparent,
@@ -22,11 +25,12 @@ void main() async {
 
   runApp(
     EasyLocalization(
-        child: const MyApp(),
-        supportedLocales: const [Locale('vi')],
-        fallbackLocale: const Locale('vi'),
-        useFallbackTranslations: true,
-        path: 'assets/translations'),);
+      child: const MyApp(),
+      supportedLocales: const [Locale('vi')],
+      fallbackLocale: const Locale('vi'),
+      useFallbackTranslations: true,
+      path: 'assets/translations'),
+  );
 }
 
 class MyApp extends StatelessWidget {
@@ -38,6 +42,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       navigatorKey: StackedService.navigatorKey,
       onGenerateRoute: StackedRouter().onGenerateRoute,
+      navigatorObservers: [routeObserver],
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),

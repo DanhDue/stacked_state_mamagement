@@ -10,6 +10,10 @@ import 'package:flutter/material.dart';
 import 'package:stacked/stacked.dart';
 import 'package:stacked/stacked_annotations.dart';
 
+import '../ui/sample/future_example/future_example_view.dart';
+import '../ui/sample/partial_builds/partial_build_view.dart';
+import '../ui/sample/reactive_example/reactive_example_view.dart';
+import '../ui/sample/stream_example/stream_example_view.dart';
 import '../ui/views/activity/activity_view.dart';
 import '../ui/views/home/home_view.dart';
 import '../ui/views/login/login_view.dart';
@@ -26,6 +30,10 @@ class Routes {
   static const String workoutView = '/workout-view';
   static const String activityView = '/activity-view';
   static const String profileView = '/profile-view';
+  static const String partialBuildsView = '/partial-builds-view';
+  static const String reactiveExampleView = '/reactive-example-view';
+  static const String futureExampleView = '/future-example-view';
+  static const String streamExampleView = '/stream-example-view';
   static const all = <String>{
     splashView,
     loginView,
@@ -34,6 +42,10 @@ class Routes {
     workoutView,
     activityView,
     profileView,
+    partialBuildsView,
+    reactiveExampleView,
+    futureExampleView,
+    streamExampleView,
   };
 }
 
@@ -48,6 +60,10 @@ class StackedRouter extends RouterBase {
     RouteDef(Routes.workoutView, page: WorkoutView),
     RouteDef(Routes.activityView, page: ActivityView),
     RouteDef(Routes.profileView, page: ProfileView),
+    RouteDef(Routes.partialBuildsView, page: PartialBuildsView),
+    RouteDef(Routes.reactiveExampleView, page: ReactiveExampleView),
+    RouteDef(Routes.futureExampleView, page: FutureExampleView),
+    RouteDef(Routes.streamExampleView, page: StreamExampleView),
   ];
   @override
   Map<Type, StackedRouteFactory> get pagesMap => _pagesMap;
@@ -94,5 +110,60 @@ class StackedRouter extends RouterBase {
         settings: data,
       );
     },
+    PartialBuildsView: (data) {
+      var args = data.getArgs<PartialBuildsViewArguments>(
+        orElse: () => PartialBuildsViewArguments(),
+      );
+      return MaterialPageRoute<dynamic>(
+        builder: (context) => PartialBuildsView(key: args.key),
+        settings: data,
+      );
+    },
+    ReactiveExampleView: (data) {
+      var args = data.getArgs<ReactiveExampleViewArguments>(
+        orElse: () => ReactiveExampleViewArguments(),
+      );
+      return MaterialPageRoute<dynamic>(
+        builder: (context) => ReactiveExampleView(key: args.key),
+        settings: data,
+      );
+    },
+    FutureExampleView: (data) {
+      var args = data.getArgs<FutureExampleViewArguments>(
+        orElse: () => FutureExampleViewArguments(),
+      );
+      return MaterialPageRoute<dynamic>(
+        builder: (context) => FutureExampleView(key: args.key),
+        settings: data,
+      );
+    },
+    StreamExampleView: (data) {
+      return MaterialPageRoute<dynamic>(
+        builder: (context) => const StreamExampleView(),
+        settings: data,
+      );
+    },
   };
+}
+
+/// ************************************************************************
+/// Arguments holder classes
+/// *************************************************************************
+
+/// PartialBuildsView arguments holder class
+class PartialBuildsViewArguments {
+  final Key? key;
+  PartialBuildsViewArguments({this.key});
+}
+
+/// ReactiveExampleView arguments holder class
+class ReactiveExampleViewArguments {
+  final Key? key;
+  ReactiveExampleViewArguments({this.key});
+}
+
+/// FutureExampleView arguments holder class
+class FutureExampleViewArguments {
+  final Key? key;
+  FutureExampleViewArguments({this.key});
 }
