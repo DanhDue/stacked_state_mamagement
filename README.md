@@ -30,13 +30,30 @@ Here, I only show you some steps to run this sample.
 
 1. Flutter version 2..8.0 is used for this project:
 ```
-fvm use 2.8.0
+fvm use 2.8.1
 ```
 
-2. FVM setup:
+2. FVM setup for the Android Studio:
 <p align='center'>
     <img src="screenshots/fvm_setup.gif" />
 </p>
+
+3. FVM setup for the VSCode:
+Create a settings.json file on ~/.vscode folder and paste content below:
+```
+{
+  "dart.flutterSdkPath": ".fvm/flutter_sdk",
+  // Remove .fvm files from search
+  "search.exclude": {
+    "**/.fvm": true
+  },
+  // Remove from file watching
+  "files.watcherExclude": {
+    "**/.fvm": true
+  },
+  "terminal.integrated.fontFamily": "MesloLGS NF",
+}
+```
 
 Libraries Used
 --------------

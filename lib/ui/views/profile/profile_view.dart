@@ -2,7 +2,6 @@ import 'package:fimber/fimber.dart';
 import 'package:flutter/material.dart';
 import 'package:stacked/stacked.dart';
 import 'package:stacked_state_mamagement/app/app.locator.dart';
-import 'package:stacked_state_mamagement/app/app.router.dart';
 import 'package:stacked_state_mamagement/ui/views/profile/profile_view_model.dart';
 
 import '../../../main.dart';
@@ -15,7 +14,6 @@ class ProfileView extends StatefulWidget {
 }
 
 class _ProfileViewState extends State<ProfileView> with RouteAware {
-
   @override
   void didChangeDependencies() {
     super.didChangeDependencies();
