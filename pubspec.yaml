@@ -75,6 +75,7 @@ dev_dependencies:
   # Generator
   stacked_generator: ^0.5.6
   build_runner: ^2.1.5
+  mockito: ^5.0.17
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
