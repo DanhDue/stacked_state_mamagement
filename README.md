@@ -92,6 +92,8 @@ Libraries Used
 [17]: https://viblo.asia/p/bottom-navigation-with-stacked-architecture-XL6lABVp5ek
 [18]: https://fvm.app/
 [19]: https://fvm.app/docs/getting_started/installation
+[20]: https://viblo.asia/p/handle-users-profile-in-flutter-XL6lABpJ5ek
+[21]: https://viblo.asia/p/how-to-unit-test-in-flutter-Eb85ozv6l2G
 
 
 Screenshots
@@ -113,6 +115,9 @@ References
 * [New Setup for Flutter Stacked State Management.][3]
 * [Flutter StateManagement with Stacked - Deep Dive tutorial.][4]
 * [Bottom Navigation with Stacked Architecture.][17]
+* [Handle Users profile in Flutter.][20]
+* [How to Unit Test in Flutter][21]
+
 
 License
 -------
