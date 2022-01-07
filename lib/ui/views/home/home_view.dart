@@ -43,10 +43,10 @@ class HomeView extends StatelessWidget {
             duration: const Duration(milliseconds: 300),
             reverse: model.reverse,
             transitionBuilder: (
-                Widget child,
-                Animation<double> animation,
-                Animation<double> secondaryAnimation,
-                ) {
+              Widget child,
+              Animation<double> animation,
+              Animation<double> secondaryAnimation,
+            ) {
               return SharedAxisTransition(
                 child: child,
                 animation: animation,
@@ -54,8 +54,7 @@ class HomeView extends StatelessWidget {
                 transitionType: SharedAxisTransitionType.horizontal,
               );
             },
-            child: getViewForIndex(model.currentIndex)
-        ),
+            child: getViewForIndex(model.currentIndex)),
       ),
       viewModelBuilder: () => HomeViewModel(),
     );
@@ -63,12 +62,16 @@ class HomeView extends StatelessWidget {
 
   Widget getViewForIndex(int index) {
     switch (index) {
-      case 0: return const ProgramView();
-      case 1: return const WorkoutView();
-      case 2: return const ActivityView();
-      case 3: return const ProfileView();
-      default: return const ProgramView();
+      case 0:
+        return const ProgramView();
+      case 1:
+        return const WorkoutView();
+      case 2:
+        return const ActivityView();
+      case 3:
+        return const ProfileView();
+      default:
+        return const ProgramView();
     }
   }
-
 }

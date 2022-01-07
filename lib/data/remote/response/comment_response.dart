@@ -1,6 +1,6 @@
 import 'package:vexana/vexana.dart';
 
-class CommentRes extends INetworkModel<CommentRes>{
+class CommentRes extends INetworkModel<CommentRes> {
   int? postId;
   int? id;
   String? name;

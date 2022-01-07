@@ -14,7 +14,8 @@ class ActivityView extends StatelessWidget {
       // Indicate that we only want to initialise a specialty view model once
       initialiseSpecialViewModelsOnce: true,
       builder: (context, model, child) => Scaffold(
-        body: Center(child: TextButton(
+        body: Center(
+            child: TextButton(
           onPressed: () {
             model.navigateToPartialBuildsView();
           },

@@ -13,7 +13,9 @@ class ProgramView extends StatelessWidget {
       // Indicate that we only want to initialise a specialty view model once
       initialiseSpecialViewModelsOnce: true,
       builder: (context, model, child) => const Scaffold(
-        body: Center(child: Text('Program'),),
+        body: Center(
+          child: Text('Program'),
+        ),
       ),
       viewModelBuilder: () => locator<ProgramViewModel>(),
     );

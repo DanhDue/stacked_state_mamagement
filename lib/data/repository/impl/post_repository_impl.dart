@@ -6,5 +6,6 @@ import 'package:stacked_state_mamagement/data/repository/post_repository.dart';
 class PostRepositoryImpl extends PostRepository {
   final _apiService = locator<ApiService>();
   @override
-  Future<List<PostRes>?> getPostsForUser(int userId) => _apiService.getPostsForUser(userId);
+  Future<List<PostRes>?> getPostsForUser(int userId) =>
+      _apiService.getPostsForUser(userId);
 }

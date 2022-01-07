@@ -6,7 +6,10 @@ class UserResponse extends INetworkModel<UserResponse> {
   String? username;
   UserResponse({this.id, this.name, this.username});
 
-  UserResponse.initial(): id = 0, name = '', username = '';
+  UserResponse.initial()
+      : id = 0,
+        name = '',
+        username = '';
 
   UserResponse.fromJson(Map<String, dynamic> json) {
     id = json['id'];
@@ -24,5 +27,6 @@ class UserResponse extends INetworkModel<UserResponse> {
   }
 
   @override
-  UserResponse fromJson(Map<String, dynamic> json) => UserResponse.fromJson(json);
+  UserResponse fromJson(Map<String, dynamic> json) =>
+      UserResponse.fromJson(json);
 }

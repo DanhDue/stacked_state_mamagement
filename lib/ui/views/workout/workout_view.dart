@@ -13,7 +13,9 @@ class WorkoutView extends StatelessWidget {
       // Indicate that we only want to initialise a specialty view model once
       initialiseSpecialViewModelsOnce: true,
       builder: (context, model, child) => const Scaffold(
-        body: Center(child: Text('Workout'),),
+        body: Center(
+          child: Text('Workout'),
+        ),
       ),
       viewModelBuilder: () => locator<WorkoutViewModel>(),
     );

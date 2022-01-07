@@ -15,11 +15,15 @@ class SplashView extends HookWidget {
       builder: (context, model, child) => Scaffold(
         backgroundColor: Colors.white,
         body: Center(
-          child: Lottie.asset('assets/lotties/splash_animation.json', controller: _animationController,
+          child: Lottie.asset(
+            'assets/lotties/splash_animation.json',
+            controller: _animationController,
             onLoaded: (composition) {
-              _animationController..duration = composition.duration..forward();
+              _animationController
+                ..duration = composition.duration
+                ..forward();
               _animationController.addStatusListener((status) {
-                if(status == AnimationStatus.completed) {
+                if (status == AnimationStatus.completed) {
                   model.indicateAnimationComplete();
                 }
               });

@@ -8,7 +8,8 @@ import 'app/app.locator.dart';
 import 'app/app.router.dart';
 
 // Register the RouteObserver as a navigation observer.
-final RouteObserver<ModalRoute<void>> routeObserver = RouteObserver<ModalRoute<void>>();
+final RouteObserver<ModalRoute<void>> routeObserver =
+    RouteObserver<ModalRoute<void>>();
 
 void main() async {
   SystemChrome.setSystemUIOverlayStyle(const SystemUiOverlayStyle(
@@ -25,11 +26,11 @@ void main() async {
 
   runApp(
     EasyLocalization(
-      child: const MyApp(),
-      supportedLocales: const [Locale('vi')],
-      fallbackLocale: const Locale('vi'),
-      useFallbackTranslations: true,
-      path: 'assets/translations'),
+        child: const MyApp(),
+        supportedLocales: const [Locale('vi')],
+        fallbackLocale: const Locale('vi'),
+        useFallbackTranslations: true,
+        path: 'assets/translations'),
   );
 }
 

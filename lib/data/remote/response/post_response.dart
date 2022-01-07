@@ -1,6 +1,6 @@
 import 'package:vexana/vexana.dart';
 
-class PostRes extends INetworkModel<PostRes>{
+class PostRes extends INetworkModel<PostRes> {
   int? userId;
   int? id;
   String? title;

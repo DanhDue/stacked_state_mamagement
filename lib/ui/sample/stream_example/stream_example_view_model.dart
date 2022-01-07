@@ -6,7 +6,8 @@ class StreamExampleViewModel extends StreamViewModel<int> {
   bool _otherSource = false;
 
   @override
-  Stream<int> get stream => _otherSource ? epochFasterUpdates() : epochUpdatesNumbers();
+  Stream<int> get stream =>
+      _otherSource ? epochFasterUpdates() : epochUpdatesNumbers();
 
   void swapSources() {
     _otherSource = !_otherSource;
@@ -26,5 +27,4 @@ class StreamExampleViewModel extends StreamViewModel<int> {
       yield DateTime.now().millisecondsSinceEpoch;
     }
   }
-
 }

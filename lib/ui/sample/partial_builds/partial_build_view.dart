@@ -41,7 +41,10 @@ class _StringForm extends HookViewModelWidget<PartialBuildsViewModel> {
   const _StringForm({Key? key}) : super(key: key, reactive: false);
 
   @override
-  Widget buildViewModelWidget(BuildContext context, PartialBuildsViewModel model,) {
+  Widget buildViewModelWidget(
+    BuildContext context,
+    PartialBuildsViewModel model,
+  ) {
     Fimber.d('_StringForm rebuilt');
     var text = useTextEditingController();
     return TextField(

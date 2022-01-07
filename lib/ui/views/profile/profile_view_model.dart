@@ -21,7 +21,7 @@ class ProfileViewModel extends BaseViewModel {
 
   void getUserProfile() async {
     Fimber.d('getUserProfile()');
-    if(users != null) return;
+    if (users != null) return;
     users = await _userRepository.getPostsForUser(1);
     Fimber.d('users: $users');
     notifyListeners();

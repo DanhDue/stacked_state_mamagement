@@ -1,5 +1,3 @@
 import 'package:stacked/stacked.dart';
 
-class OnboardViewModel extends BaseViewModel {
-
-}
+class OnboardViewModel extends BaseViewModel {}

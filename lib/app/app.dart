@@ -20,29 +20,26 @@ import 'package:stacked_state_mamagement/ui/views/splash/splash_view.dart';
 import 'package:stacked_state_mamagement/ui/views/workout/workout_view.dart';
 import 'package:stacked_state_mamagement/ui/views/workout/workout_view_model.dart';
 
-@StackedApp(
-  routes: [
-    MaterialRoute(page: SplashView, initial: true),
-    MaterialRoute(page: LoginView),
-    MaterialRoute(page: OnboardView),
-    MaterialRoute(page: HomeView),
-    MaterialRoute(page: WorkoutView),
-    MaterialRoute(page: ActivityView),
-    MaterialRoute(page: ProfileView),
-    MaterialRoute(page: PartialBuildsView),
-    MaterialRoute(page: ReactiveExampleView),
-    MaterialRoute(page: FutureExampleView),
-    MaterialRoute(page: StreamExampleView),
-  ],
-  dependencies: [
-    LazySingleton(classType: NavigationService),
-    LazySingleton(classType: ApiService),
-    LazySingleton(classType: PostRepositoryImpl, asType: PostRepository),
-    Singleton(classType: ProgramViewModel),
-    Singleton(classType: WorkoutViewModel),
-    Singleton(classType: ActivityViewModel),
-    Singleton(classType: ProfileViewModel),
-    LazySingleton(classType: CounterService),
-  ]
-)
-class AppConfigurations { }
+@StackedApp(routes: [
+  MaterialRoute(page: SplashView, initial: true),
+  MaterialRoute(page: LoginView),
+  MaterialRoute(page: OnboardView),
+  MaterialRoute(page: HomeView),
+  MaterialRoute(page: WorkoutView),
+  MaterialRoute(page: ActivityView),
+  MaterialRoute(page: ProfileView),
+  MaterialRoute(page: PartialBuildsView),
+  MaterialRoute(page: ReactiveExampleView),
+  MaterialRoute(page: FutureExampleView),
+  MaterialRoute(page: StreamExampleView),
+], dependencies: [
+  LazySingleton(classType: NavigationService),
+  LazySingleton(classType: ApiService),
+  LazySingleton(classType: PostRepositoryImpl, asType: PostRepository),
+  Singleton(classType: ProgramViewModel),
+  Singleton(classType: WorkoutViewModel),
+  Singleton(classType: ActivityViewModel),
+  Singleton(classType: ProfileViewModel),
+  LazySingleton(classType: CounterService),
+])
+class AppConfigurations {}
