@@ -20,6 +20,11 @@ import 'package:stacked_state_mamagement/ui/views/splash/splash_view.dart';
 import 'package:stacked_state_mamagement/ui/views/workout/workout_view.dart';
 import 'package:stacked_state_mamagement/ui/views/workout/workout_view_model.dart';
 
+class EnvironmentConfig {
+  static const APP_NAME = String.fromEnvironment('DART_DEFINES_APP_NAME', defaultValue: "Karate");
+  static const APP_SUFFIX = String.fromEnvironment('DART_DEFINES_APP_SUFFIX');
+}
+
 @StackedApp(routes: [
   MaterialRoute(page: SplashView, initial: true),
   MaterialRoute(page: LoginView),
