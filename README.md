@@ -28,7 +28,7 @@ So, in this project, I have used the FVM([Flutter Version Management][18]) packa
 To install this app, you can see at FVM official [page][19].
 Here, I only show you some steps to run this sample.
 
-1. Flutter version 2..8.0 is used for this project:
+1. Flutter version 2.8.1 is used for this project:
 ```
 fvm use 2.8.1
 ```
