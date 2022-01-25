@@ -1,6 +1,6 @@
 <component name="ProjectRunConfigurationManager">
   <configuration default="false" name="SSM(Stag)" type="FlutterRunConfigurationType" factoryName="Flutter">
-    <option name="additionalArgs" value="--dart-define=DART_DEFINES_APP_NAME=&quot;SSM(Stag)&quot; --dart-define=DART_DEFINES_APP_SUFFIX=.stg --profile" />
+    <option name="additionalArgs" value="--dart-define=DART_DEFINES_APP_NAME=&quot;SSM(Stg)&quot; --dart-define=DART_DEFINES_APP_SUFFIX=.stg --profile" />
     <option name="filePath" value="$PROJECT_DIR$/lib/main.dart" />
     <method v="2" />
   </configuration>

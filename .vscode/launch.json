@@ -15,12 +15,24 @@
             ]
         },
         {
-            "name": "SSM(Production)",
+            "name": "SSM(Stg)",
             "request": "launch",
             "type": "dart",
             "program": "lib/main.dart",
             "args": [
-                "--dart-define", "DART_DEFINES_APP_NAME=SSM"
+                "--dart-define", "DART_DEFINES_APP_NAME=SSM(Stg)",
+                "--dart-define", "DART_DEFINES_APP_SUFFIX=.stg",
+                "--profile",
+            ]
+        },
+        {
+            "name": "SSM(Prod)",
+            "request": "launch",
+            "type": "dart",
+            "program": "lib/main.dart",
+            "args": [
+                "--dart-define", "DART_DEFINES_APP_NAME=SSM",
+                "--release",
             ]
         }
     ]
