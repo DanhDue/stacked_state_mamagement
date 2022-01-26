@@ -12,6 +12,7 @@
             "args": [
                 "--dart-define", "DART_DEFINES_APP_NAME=SSM(Dev)",
                 "--dart-define", "DART_DEFINES_APP_SUFFIX=.dev",
+                "--dart-define", "DART_DEFINES_BASE_URL=https://dev.danhdue.com/",
             ]
         },
         {
@@ -22,6 +23,7 @@
             "args": [
                 "--dart-define", "DART_DEFINES_APP_NAME=SSM(Stg)",
                 "--dart-define", "DART_DEFINES_APP_SUFFIX=.stg",
+                "--dart-define", "DART_DEFINES_BASE_URL=https://stg.danhdue.com/",
                 "--profile",
             ]
         },
@@ -32,6 +34,7 @@
             "program": "lib/main.dart",
             "args": [
                 "--dart-define", "DART_DEFINES_APP_NAME=SSM",
+                "--dart-define", "DART_DEFINES_BASE_URL=https://danhdue.com/",
                 "--release",
             ]
         }

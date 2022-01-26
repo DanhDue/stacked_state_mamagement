@@ -1,6 +1,6 @@
 <component name="ProjectRunConfigurationManager">
   <configuration default="false" name="SSM(Prod)" type="FlutterRunConfigurationType" factoryName="Flutter">
-    <option name="additionalArgs" value="--dart-define=DART_DEFINES_APP_NAME=&quot;SSM&quot; --release" />
+    <option name="additionalArgs" value="--dart-define=DART_DEFINES_APP_NAME=&quot;SSM&quot; --dart-define=DART_DEFINES_BASE_URL=&quot;https://dev.danhdue.com/&quot; --release" />
     <option name="filePath" value="$PROJECT_DIR$/lib/main.dart" />
     <method v="2" />
   </configuration>
