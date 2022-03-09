@@ -15,7 +15,7 @@ class ActivityView extends StatelessWidget {
       initialiseSpecialViewModelsOnce: true,
       builder: (context, model, child) => Scaffold(
         body: Center(
-            child: TextButton(
+          child: TextButton(
           onPressed: () {
             model.navigateToPartialBuildsView();
           },

@@ -22,19 +22,19 @@ class HomeView extends StatelessWidget {
           onTap: model.setIndex,
           items: const [
             BottomNavigationBarItem(
-              title: Text('Program'),
+              label: 'Program',
               icon: Icon(Icons.art_track),
             ),
             BottomNavigationBarItem(
-              title: Text('Workout'),
+              label: 'Workout',
               icon: Icon(Icons.list),
             ),
             BottomNavigationBarItem(
-              title: Text('Activity'),
+              label: 'Activity',
               icon: Icon(Icons.list),
             ),
             BottomNavigationBarItem(
-              title: Text('Profile'),
+              label: 'Profile',
               icon: Icon(Icons.list),
             ),
           ],

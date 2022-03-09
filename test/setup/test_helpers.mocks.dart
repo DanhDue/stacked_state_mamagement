@@ -5,7 +5,6 @@
 import 'dart:async' as _i5;
 
 import 'package:flutter/material.dart' as _i4;
-import 'package:get/get.dart' as _i6;
 import 'package:mockito/mockito.dart' as _i1;
 import 'package:stacked_services/stacked_services.dart' as _i3;
 import 'package:stacked_state_mamagement/services/counter_service.dart' as _i2;
@@ -95,10 +94,10 @@ class MockNavigationService extends _i1.Mock implements _i3.NavigationService {
           bool? popGesture,
           int? id,
           _i4.Curve? curve,
-          _i6.Bindings? binding,
+          _i3.Bindings? binding,
           bool? fullscreenDialog = false,
           bool? preventDuplicates = true,
-          _i6.Transition? transitionClass}) =>
+          _i3.Transition? transitionClass}) =>
       (super.noSuchMethod(Invocation.method(#navigateWithTransition, [
         page
       ], {
@@ -121,10 +120,10 @@ class MockNavigationService extends _i1.Mock implements _i3.NavigationService {
           bool? popGesture,
           int? id,
           _i4.Curve? curve,
-          _i6.Bindings? binding,
+          _i3.Bindings? binding,
           bool? fullscreenDialog = false,
           bool? preventDuplicates = true,
-          _i6.Transition? transitionClass}) =>
+          _i3.Transition? transitionClass}) =>
       (super.noSuchMethod(Invocation.method(#replaceWithTransition, [
         page
       ], {
@@ -171,12 +170,12 @@ class MockNavigationService extends _i1.Mock implements _i3.NavigationService {
           int? id,
           bool? opaque,
           _i4.Curve? curve,
-          _i6.Bindings? binding,
+          _i3.Bindings? binding,
           Duration? duration,
           bool? fullscreenDialog = false,
           bool? popGesture,
           bool? preventDuplicates = true,
-          _i6.Transition? transition}) =>
+          _i3.Transition? transition}) =>
       (super.noSuchMethod(Invocation.method(#navigateToView, [
         view
       ], {
