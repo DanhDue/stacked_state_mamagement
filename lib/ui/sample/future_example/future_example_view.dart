@@ -36,7 +36,9 @@ class FutureExampleView extends StatelessWidget {
                           TextButton(
                             onPressed: () {
                               _navigationService
-                                  .navigateTo(Routes.streamExampleView);
+                                  .navigateTo(Routes.stream,
+                                  arguments: StreamExampleViewArguments(userName: "DanhDue ExOICTIF",
+                                      email: "danhdue@gmail.com"));
                             },
                             child: const Text('Continue'),
                           )

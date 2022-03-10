@@ -33,7 +33,7 @@ class Routes {
   static const String partialBuildsView = '/partial-builds-view';
   static const String reactiveExampleView = '/reactive-example-view';
   static const String futureExampleView = '/future-example-view';
-  static const String streamExampleView = '/stream-example-view';
+  static const String stream = '/stream-example-view';
   static const all = <String>{
     splashView,
     loginView,
@@ -45,7 +45,7 @@ class Routes {
     partialBuildsView,
     reactiveExampleView,
     futureExampleView,
-    streamExampleView,
+    stream,
   };
 }
 
@@ -63,7 +63,7 @@ class StackedRouter extends RouterBase {
     RouteDef(Routes.partialBuildsView, page: PartialBuildsView),
     RouteDef(Routes.reactiveExampleView, page: ReactiveExampleView),
     RouteDef(Routes.futureExampleView, page: FutureExampleView),
-    RouteDef(Routes.streamExampleView, page: StreamExampleView),
+    RouteDef(Routes.stream, page: StreamExampleView),
   ];
   @override
   Map<Type, StackedRouteFactory> get pagesMap => _pagesMap;
@@ -138,8 +138,15 @@ class StackedRouter extends RouterBase {
       );
     },
     StreamExampleView: (data) {
+      var args = data.getArgs<StreamExampleViewArguments>(
+        orElse: () => StreamExampleViewArguments(),
+      );
       return MaterialPageRoute<dynamic>(
-        builder: (context) => const StreamExampleView(),
+        builder: (context) => StreamExampleView(
+          key: args.key,
+          userName: args.userName,
+          email: args.email,
+        ),
         settings: data,
       );
     },
@@ -166,4 +173,12 @@ class ReactiveExampleViewArguments {
 class FutureExampleViewArguments {
   final Key? key;
   FutureExampleViewArguments({this.key});
+}
+
+/// StreamExampleView arguments holder class
+class StreamExampleViewArguments {
+  final Key? key;
+  final String? userName;
+  final String? email;
+  StreamExampleViewArguments({this.key, this.userName, this.email});
 }

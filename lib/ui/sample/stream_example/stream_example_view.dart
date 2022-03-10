@@ -3,7 +3,10 @@ import 'package:stacked/stacked.dart';
 import 'package:stacked_state_mamagement/ui/sample/stream_example/stream_example_view_model.dart';
 
 class StreamExampleView extends StatelessWidget {
-  const StreamExampleView({Key? key}) : super(key: key);
+  const StreamExampleView({Key? key, this.userName, this.email}) : super(key: key);
+
+  final String? userName;
+  final String? email;
 
   @override
   Widget build(BuildContext context) {

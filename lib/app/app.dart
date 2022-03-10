@@ -38,7 +38,7 @@ class EnvironmentConfig {
   MaterialRoute(page: PartialBuildsView),
   MaterialRoute(page: ReactiveExampleView),
   MaterialRoute(page: FutureExampleView),
-  MaterialRoute(page: StreamExampleView),
+  MaterialRoute(page: StreamExampleView, name: "stream"),
 ], dependencies: [
   LazySingleton(classType: NavigationService),
   LazySingleton(classType: ApiService),
