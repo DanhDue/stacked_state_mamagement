@@ -16,20 +16,32 @@ class PartialBuildsView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ViewModelBuilder<PartialBuildsViewModel>.nonReactive(
-      builder: (context, model, child) => Scaffold(
-        body: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          crossAxisAlignment: CrossAxisAlignment.center,
-          children: [
-            const _StringForm(),
-            const _TextAndValue(),
-            TextButton(
-              onPressed: () {
-                _navigationService.navigateTo(Routes.reactiveExampleView);
-              },
-              child: const Text('Continue'),
-            )
-          ],
+      builder: (context, model, child) => GestureDetector(
+        onTap: () {
+          FocusScopeNode currentFocus = FocusScope.of(context);
+          if (!currentFocus.hasPrimaryFocus) {
+            currentFocus.unfocus();
+          }
+        },
+        child: Scaffold(
+          body: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+              const _StringForm(),
+              const _StringForm(),
+              const _StringForm(),
+              const _StringForm(),
+              const _StringForm(isDone: true,),
+              const _TextAndValue(),
+              TextButton(
+                onPressed: () {
+                  _navigationService.navigateTo(Routes.reactiveExampleView);
+                },
+                child: const Text('Continue'),
+              )
+            ],
+          ),
         ),
       ),
       viewModelBuilder: () => PartialBuildsViewModel(),
@@ -38,7 +50,9 @@ class PartialBuildsView extends StatelessWidget {
 }
 
 class _StringForm extends HookViewModelWidget<PartialBuildsViewModel> {
-  const _StringForm({Key? key}) : super(key: key, reactive: false);
+  const _StringForm({Key? key, this.isDone}) : super(key: key, reactive: false);
+
+  final bool? isDone;
 
   @override
   Widget buildViewModelWidget(
@@ -50,6 +64,7 @@ class _StringForm extends HookViewModelWidget<PartialBuildsViewModel> {
     return TextField(
       controller: text,
       onChanged: model.updateString,
+      textInputAction: isDone != true ? TextInputAction.next : TextInputAction.done,
     );
   }
 }
